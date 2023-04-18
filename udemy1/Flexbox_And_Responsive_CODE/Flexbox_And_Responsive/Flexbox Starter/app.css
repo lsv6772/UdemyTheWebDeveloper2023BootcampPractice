@@ -1,0 +1,57 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    /* height: 500px; */
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap;     */
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    flex-basis: 600px;
+}
+/* flex-basis는 요소가 배치될 때의 최초 크기, 주축의 방향에 따라 너비도 되고 높이도 됨. */
+
+div:nth-of-type(1) {
+    flex-grow: 1;
+    flex-shrink: 3;
+}
+div:nth-of-type(5) {
+    flex-grow: 2;
+    flex-shrink: 0  ;
+}
+
+/* flex-grow는 공간이 있을 때 요소가 그 공간을 얼마나 차지할지 정합니다. */
+
+/* flex-shrink는 컨테이너에 충분한 공간이 없을 때 비율이 줄어드는 요소 통제 */ 
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+main .sidebar {
+    background-color: #6930c3;
+    border: 2px solid white;
+    flex: 1 2 300px;
+}
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 2 1 800px;
+}
